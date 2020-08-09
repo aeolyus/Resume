@@ -1,4 +1,4 @@
-.PHONY: build clean help
+.PHONY: all build compile clean help
 .DEFAULT_GOAL := help
 
 all: build compile clean ## Build, compile, and clean
