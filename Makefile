@@ -8,7 +8,7 @@ build: ## Build docker image
 
 compile: build ## Compile resume.tex into a pdf
 	@docker run --rm --name latex \
-		-v ${PWD}:/tmp/ \
+		-v ${CURDIR}:/tmp/ \
 		-w /tmp/current/ \
 		latex \
 		xelatex resume.tex
