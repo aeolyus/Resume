@@ -31,7 +31,7 @@
 \let\olditemize=\itemize \let\endolditemize=\enditemize
 \renewenvironment{itemize}{\olditemize[topsep=0em] \itemsep-.3em}{\endolditemize}
 
-\newcommand{\myhref}[1]{\href{https://#1}{#1}}
+\newcommand{\link}[1]{\href{https://#1}{#1}}
 \newcommand{\entry}[3]{\quad\textbf{#1}\\#2\qquad#3}
 
 \renewcommand{\maketitle}{
@@ -41,8 +41,8 @@
   \begin{bfseries}
     \faEmail    \hspace{1pt} \href{mailto:richardh@berkeley.edu}{richardh@berkeley.edu} \quad
     \faPhone    \hspace{1pt} (408) 888-6082 \quad
-    \faLinkedin \hspace{1pt} \myhref{linkedin.com/in/aeolyus} \quad
-    \faGithub   \hspace{1pt} \myhref{github.com/aeolyus}
+    \faLinkedin \hspace{1pt} \link{linkedin.com/in/aeolyus} \quad
+    \faGithub   \hspace{1pt} \link{github.com/aeolyus}
   \end{bfseries}
 }
 
@@ -118,7 +118,7 @@ Coursework:
 \end{itemize}
 
 \subsection{Cougle}
-\entry{\myhref{cougle.ml}}{Feb 2018}{PHP, HTML, CSS, Linux}
+\entry{\link{cougle.ml}}{Feb 2018}{PHP, HTML, CSS, Linux}
 \begin{itemize}
   \item Created an online anonymous peer-counseling forum with 300+ users to assist
     students in a high school with a 4:3000+ counselor to student ratio
@@ -127,7 +127,7 @@ Coursework:
 \end{itemize}
 
 \subsection{EVSD Web App}
-\entry{\myhref{evsd.club}}{May 2016 - May 2018}{Meteor.js, MongoDB, Linux}
+\entry{\link{evsd.club}}{May 2016 - May 2018}{Meteor.js, MongoDB, Linux}
 \begin{itemize}
   \item Developed a web app that handles all logistics, 400+ users, member balances,
     \$60k+year, tournaments
