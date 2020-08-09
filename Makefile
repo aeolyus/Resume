@@ -16,7 +16,7 @@ compile: build ## Compile resume.tex into a pdf
 clean: ## Clean up the repo
 	@git clean -fdx
 
-help: Makefile
+help: Makefile ## Print this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
 		| sort \
 		| awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
