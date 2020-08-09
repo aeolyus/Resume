@@ -6,7 +6,7 @@ all: build compile clean ## Build, compile, and clean
 build: ## Build docker image
 	@docker build . -t latex
 
-compile: ## Compile resume.tex into a pdf
+compile: build ## Compile resume.tex into a pdf
 	@docker run --rm --name latex \
 		-v ${PWD}:/tmp/ \
 		-w /tmp/current/ \
