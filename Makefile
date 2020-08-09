@@ -1,17 +1,23 @@
 .PHONY: all build compile clean help
 .DEFAULT_GOAL := help
 
-all: build compile clean ## Build, compile, and clean
+SRCDIR := current
+SRC := $(wildcard $(SRCDIR)/*.tex)
+OBJ := $(SRC:.tex=.pdf)
 
-build: ## Build docker image
+all: compile clean ## Build, compile, and clean
+
+build: Dockerfile ## Build docker image
 	@docker build . -t latex
 
-compile: build ## Compile resume.tex into a pdf
+compile: build $(OBJ) ## Compile resume.tex into a pdf
+
+$(OBJ): $(SRC)
 	@docker run --rm --name latex \
-		-v ${CURDIR}:/tmp/ \
-		-w /tmp/current/ \
+		-v $(CURDIR):/tmp/ \
+		-w /tmp/ \
 		latex \
-		xelatex resume.tex
+		xelatex -output-directory $(SRCDIR) $(SRC)
 
 clean: ## Clean up the repo
 	@git clean -fdx
