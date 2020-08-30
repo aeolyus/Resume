@@ -17,7 +17,7 @@ $(OBJ): $(SRC)
 		-v $(CURDIR):/tmp/ \
 		-w /tmp/ \
 		latex \
-		xelatex -output-directory $(SRCDIR) $(SRC)
+		latexmk -xelatex -pvc -view=none -output-directory=$(SRCDIR) $(SRC)
 
 clean: ## Clean up the repo
 	@git clean -fdx
