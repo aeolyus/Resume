@@ -4,6 +4,7 @@
 SRCDIR := current
 SRC := $(wildcard $(SRCDIR)/*.tex)
 OBJ := $(SRC:.tex=.pdf)
+.PRECIOUS: $(OBJ)
 
 all: compile clean ## Build, compile, and clean
 
