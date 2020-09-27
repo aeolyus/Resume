@@ -1,17 +1,14 @@
 .PHONY: all build compile clean help
-.DEFAULT_GOAL := help
 
 SRCDIR := current
 SRC := $(wildcard $(SRCDIR)/*.tex)
 OBJ := $(SRC:.tex=.pdf)
 .PRECIOUS: $(OBJ)
 
-all: compile clean ## Build, compile, and clean
+compile: build $(OBJ) ## Compile resume.tex into a pdf
 
 build: Dockerfile ## Build docker image
 	@docker build . -t latex
-
-compile: build $(OBJ) ## Compile resume.tex into a pdf
 
 $(OBJ): $(SRC)
 	@docker run --rm --name latex \
