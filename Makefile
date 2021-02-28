@@ -5,7 +5,7 @@ SRC := $(wildcard $(SRCDIR)/*.tex)
 OBJ := $(SRC:.tex=.pdf)
 .PRECIOUS: $(OBJ)
 
-compile: build $(OBJ) ## Compile resume.tex into a pdf
+compile: $(OBJ) ## Compile resume.tex into a pdf
 
 build: Dockerfile ## Build docker image
 	@docker build . -t latex
@@ -14,7 +14,7 @@ $(OBJ): $(SRC)
 	@docker run --rm --name latex \
 		-v $(CURDIR):/tmp/ \
 		-w /tmp/ \
-		latex \
+		aeolyus/resume-latex \
 		latexmk -xelatex -pvc -view=none -output-directory=$(SRCDIR) $(SRC)
 
 clean: ## Clean up the repo
