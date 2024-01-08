@@ -1,12 +1,14 @@
-.PHONY: all build compile clean help
-
 SRCDIR := current
 SRC := $(wildcard $(SRCDIR)/*.tex)
 OBJ := $(SRC:.tex=.pdf)
 .PRECIOUS: $(OBJ)
 
+default: help
+
+.PHONY: compile
 compile: $(OBJ) ## Compile resume.tex into a pdf
 
+.PHONY: build
 build: Dockerfile ## Build docker image
 	@docker build . -t latex
 
@@ -17,9 +19,11 @@ $(OBJ): $(SRC)
 		aeolyus/resume-latex \
 		latexmk -xelatex -pvc -view=none -output-directory=$(SRCDIR) $(SRC)
 
+.PHONY: clean
 clean: ## Clean up the repo
 	@git clean -fdx
 
+.PHONY: clean
 help: Makefile ## Print this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
 		| sort \
