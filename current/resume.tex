@@ -72,8 +72,20 @@ Coursework:
 
 \section{Experience}
 
+\subsection{Software Engineer}
+\entry{Niantic}{April 2023 - Present}{Palo Alto, CA}
+\begin{itemize}
+  \item Lead ads team to re-architect entire stack from scratch to be generic
+    and handle not just Pokemon Go but all other Niantic games and more
+  \item Designed and wrote microservices to handle geospatial indexing, rate
+    limiting, central ad server
+  \item Mentored multiple apprentices who all succeeded in converting to FTE;
+    reduced company CICD costs by 50\%; helped migrate company codebase to
+    monorepo; created test framework library for Spanner
+\end{itemize}
+
 \subsection{Production Engineer}
-\entry{Meta/Facebook}{Jan 2021 - Now}{Menlo Park, CA}
+\entry{Meta/Facebook}{Jan 2021 - April 2023}{Menlo Park, CA}
 \begin{itemize}
   \item Built prestart/poststop hook for cache services (Memcache, TAO, etc)
     for SEV prevention to conditionally clean up shared memory preventing
@@ -94,48 +106,44 @@ Coursework:
 \subsection{Software Engineer Intern}
 \entry{8th Wall}{May 2019 - Aug 2019}{Palo Alto, CA}
 \begin{itemize}
-  \item Constructed new sign up flow for new console account system using
-    React, Redux, Express, AWS Cognito
   \item Programmed contract automation using Javascript, PostgreSQL, Stripe
   \item Automated application billing and upgrading
+  \item Constructed new sign up flow for new console account system using
+    React, Redux, Express, AWS Cognito
 \end{itemize}
 
 
 \section{Projects}
 
 \subsection{Homelab}
-\entry{\link{aeoly.us/s/homelab}}{Neverending}{Golang, Docker, Ansible}
+\entry{\link{aeoly.us/s/homelab}}
+  {Neverending}{Golang, Kubernetes, Docker, Ansible}
 \begin{itemize}
-  \item Wrote a modular machine-agnostic script that sets up my homelab infrastructure with a single command
-  \item Self-hosted web server, media server, DNS sinkhole, password manager, file-hosting, monitoring system, Minecraft server, virtualization hypervisor
-  \item Shortlinks powered by \link{gull.ml}, my simple modern URL shortener written in Go
+  \item Self-hosted kubernetes cluster with a web server, media server, DNS
+    sinkhole, password manager, file-hosting, monitoring system, Minecraft
+    server, virtualization hypervisor, and more!
+  \item Wrote a modular machine-agnostic script that sets up my homelab
+    infrastructure with a single command
+  \item Shortlinks powered by \link{s.aeoly.us}, my simple modern URL shortener
+    written in Go
 \end{itemize}
 
 \subsection{Cougle}
 \entry{\link{cougle.ml}}{Feb 2018}{PHP, HTML, CSS, Linux}
 \begin{itemize}
-  \item Created an online anonymous peer-counseling forum with 300+ users to assist
-    students in a high school with a 4:3000+ counselor to student ratio
+  \item Created an online anonymous peer-counseling forum with 300+ users to
+    assist students in a high school with a 4:3000+ counselor to student ratio
   \item Demonstrated to and inspired school district board members to create an
     advice forum at our school
 \end{itemize}
 
-\subsection{EVSD Web App}
-\entry{\link{evsd.club}}{May 2016 - May 2018}{Meteor.js, MongoDB, Linux}
-\begin{itemize}
-  \item Developed a web app that handles all logistics, 400+ users, member balances,
-    \$60k+year, tournaments
-  \item Responsible for server upkeep, configuration, and reliable operation
-\end{itemize}
-
-
 \section{Skills}
 Languages:
-  Python, Golang, Rust, C, Javascript, Java, Kotlin, HTML/CSS, Scheme, LATEX, SQL, Robotics \\
+  Python, Golang, Rust, C, Javascript/Typescript, Java, Kotlin, HTML/CSS,
+  Scheme, LATEX, SQL, Robotics \\
 Tools:
-  Docker, Ansible, PostgreSQL, Git, Linux, Bash, Vim, GDB, AWS, GCP \\
-Libraries/Frameworks:
-  Node, Meteor, Stripe, React, Redux, Express \\
+  Kubernetes, Docker, Ansible, Chef, Bazel/Buck, Nix, PostgreSQL, Git, Linux,
+  Bash, Vim, GDB, AWS, GCP \\
 Human Languages:
   English (native), Mandarin (fluent), French (proficient)
 
